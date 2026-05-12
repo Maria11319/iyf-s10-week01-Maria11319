@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 4 - Form Styling</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #0077cc;
+        }
+
+        form {
+            max-width: 600px;
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            padding: 0 10px;
+            font-weight: 600;
+            color: #0077cc;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        /* Focus State */
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0077cc;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(0,119,204,0.1);
+        }
+
+        /* Error State */
+        input:invalid,
+        textarea:invalid {
+            border-color: #cc0000;
+            background-color: #fff5f5;
+        }
+
+        input:invalid:focus,
+        textarea:invalid:focus {
+            box-shadow: 0 0 0 3px rgba(204,0,0,0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .checkbox-label input {
+            width: auto;
+            margin: 0;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            background-color: #0077cc;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #005599;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-submit:focus {
+            outline: 2px solid #0077cc;
+            outline-offset: 2px;
+        }
+
+        /* Mobile friendly */
+        @media (min-width: 768px) {
+            body {
+                padding: 60px 40px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Contact Form</h1>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" name="fullname"
+            placeholder="Enter your full name" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email"
+            placeholder="Enter your email address" required>
+
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone"
+            placeholder="Enter your phone number">
+        </fieldset>
+
+        <fieldset>
+            <legend>Message Details</legend>
+
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+            </select>
+
+            <label for="message">Message *</label>
+            <textarea id="message" name="message"
+            placeholder="Enter your message (minimum 50 characters)"
+            minlength="50" required></textarea>
+
+            <label class="checkbox-label">
+                <input type="checkbox" name="newsletter">
+                Subscribe to our newsletter
+            </label>
+        </fieldset>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+
+</body>
+</html>

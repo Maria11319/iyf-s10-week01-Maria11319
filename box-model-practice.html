@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Practice</title>
+    <style>
+
+        /* Exercise 1: Box Model Visualization */
+        .box-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #4CAF50;
+            padding: 20px;
+            border: 5px solid #333;
+            margin: 20px;
+        }
+
+        .box-content { background-color: #2196F3; }
+        .box-padding { background-color: #FF9800; }
+        .box-border { background-color: #9C27B0; }
+        .box-margin { background-color: #F44336; }
+
+        /* Exercise 2: Fixed broken box */
+        .broken-box {
+            width: 300px;
+            padding: 20px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        /* Exercise 3: Card Component */
+        .card {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            margin: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        .card button {
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Box Model Practice</h1>
+
+    <!-- Exercise 1 -->
+    <h2>Exercise 1: Box Model Visualization</h2>
+    <div class="box-container">
+        <div class="box box-content">Content</div>
+        <div class="box box-padding">Padding</div>
+        <div class="box box-border">Border</div>
+        <div class="box box-margin">Margin</div>
+    </div>
+
+    <!-- Exercise 2 -->
+    <h2>Exercise 2: Fixed Layout</h2>
+    <div class="broken-box">
+        This box is now exactly 300px wide using box-sizing: border-box.
+    </div>
+
+    <!-- Exercise 3 -->
+    <h2>Exercise 3: Card Component</h2>
+    <div class="card">
+        <img src="https://placehold.co/300x200" alt="Card image">
+        <h2>Card Title</h2>
+        <p>This is a description of the card content. It gives more details about the topic.</p>
+        <button>Learn More</button>
+    </div>
+
+</body>
+</html>

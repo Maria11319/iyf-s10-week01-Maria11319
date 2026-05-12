@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 2 - Card Component</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            margin-bottom: 10px;
+            color: #0077cc;
+        }
+
+        .card-body p {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: #e0f0ff;
+            color: #0077cc;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            border-radius: 20px;
+        }
+
+        .btn-primary {
+            background-color: #0077cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #005599;
+            transform: translateY(-2px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Card Component</h1>
+
+    <div class="cards-container">
+
+        <div class="card">
+            <img src="https://placehold.co/300x200" alt="Project 1">
+            <div class="card-body">
+                <h3>About Me Page</h3>
+                <p>My first HTML webpage built using semantic HTML with proper structure and accessibility.</p>
+                <div class="card-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">Semantic</span>
+                    <span class="tag">Accessibility</span>
+                </div>
+                <button class="btn-primary">View Project</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://placehold.co/300x200" alt="Project 2">
+            <div class="card-body">
+                <h3>Contact Form</h3>
+                <p>A fully functional contact form with validation built using HTML form elements.</p>
+                <div class="card-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">Forms</span>
+                    <span class="tag">Validation</span>
+                </div>
+                <button class="btn-primary">View Project</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://placehold.co/300x200" alt="Project 3">
+            <div class="card-body">
+                <h3>Semantic Conversion</h3>
+                <p>Converted poorly structured HTML into proper semantic HTML with meaningful tags.</p>
+                <div class="card-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Semantic</span>
+                </div>
+                <button class="btn-primary">View Project</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

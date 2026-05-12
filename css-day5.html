@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 5 - Footer Design</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222222;
+            color: #cccccc;
+            padding: 50px 20px 0;
+        }
+
+        /* Footer Columns - Mobile: 1 column */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-column p {
+            color: #aaaaaa;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul li a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ff6b35;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff6b35;
+        }
+
+        /* Copyright Row */
+        .footer-bottom {
+            border-top: 1px solid #444444;
+            padding: 20px 0;
+            text-align: center;
+            color: #888888;
+            font-size: 0.85rem;
+        }
+
+        /* Tablet - 2 columns */
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop - 4 columns */
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            footer {
+                padding: 60px 40px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>My Portfolio</h1>
+        <p>Scroll down to see the footer design.</p>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+
+            <div class="footer-column">
+                <h4>Maria Dev</h4>
+                <p>Aspiring web developer passionate about building beautiful and functional websites.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Projects</h4>
+                <ul>
+                    <li><a href="#">About Me Page</a></li>
+                    <li><a href="#">Contact Form</a></li>
+                    <li><a href="#">Semantic HTML</a></li>
+                    <li><a href="#">Portfolio Site</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/Maria11319" title="GitHub">💻</a>
+                    <a href="https://twitter.com" title="Twitter">🐦</a>
+                    <a href="https://linkedin.com" title="LinkedIn">💼</a>
+                    <a href="mailto:mariajones3197@gmail.com" title="Email">📧</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Maria. All rights reserved. Built with ❤️ and lots of CSS.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

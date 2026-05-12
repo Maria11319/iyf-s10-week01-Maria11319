@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4.2 - CSS Grid Layout</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            margin: 30px 0 15px;
+        }
+
+        /* Exercise 1: Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .photo-gallery figure {
+            width: 100%;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            display: block;
+        }
+
+        .photo-gallery figcaption {
+            text-align: center;
+            padding: 5px;
+            background-color: #f0f0f0;
+        }
+
+        /* Exercise 2: Magazine Layout */
+        .magazine {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .mag-header {
+            grid-column: 1 / -1;
+            background-color: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .mag-sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .mag-content {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .mag-footer {
+            grid-column: 1 / -1;
+            background-color: #222222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Exercise 3: Responsive Project Cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .project-card img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+            .magazine {
+                grid-template-columns: 1fr;
+            }
+            .mag-header,
+            .mag-footer {
+                grid-column: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Exercise 1: Photo Gallery -->
+    <h2>Exercise 1: Photo Gallery</h2>
+    <div class="photo-gallery">
+        <figure>
+            <img src="https://placehold.co/300x200" alt="Image 1">
+            <figcaption>Image 1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://placehold.co/300x200" alt="Image 2">
+            <figcaption>Image 2</figcaption>
+        </figure>
+        <figure>
+            <img src="https://placehold.co/300x200" alt="Image 3">
+            <figcaption>Image 3</figcaption>
+        </figure>
+        <figure>
+            <img src="https://placehold.co/300x200" alt="Image 4">
+            <figcaption>Image 4</figcaption>
+        </figure>
+        <figure>
+            <img src="https://placehold.co/300x200" alt="Image 5">
+            <figcaption>Image 5</figcaption>
+        </figure>
+        <figure>
+            <img src="https://placehold.co/300x200" alt="Image 6">
+            <figcaption>Image 6</figcaption>
+        </figure>
+    </div>
+
+    <!-- Exercise 2: Magazine Layout -->
+    <h2>Exercise 2: Magazine Layout</h2>
+    <div class="magazine">
+        <div class="mag-header">
+            <h1>My Magazine</h1>
+        </div>
+        <div class="mag-sidebar">
+            <h3>Sidebar</h3>
+            <p>Recent Posts</p>
+            <p>Categories</p>
+            <p>About</p>
+        </div>
+        <div class="mag-content">
+            <h3>Main Content</h3>
+            <p>This is the main article content area. It takes up more space than the sidebar.</p>
+            <p>More content goes here as the article continues.</p>
+        </div>
+        <div class="mag-sidebar">
+            <h3>Sidebar</h3>
+            <p>Advertisements</p>
+            <p>Related Links</p>
+        </div>
+        <div class="mag-content">
+            <h3>More Content</h3>
+            <p>Additional article sections continue here with more details.</p>
+        </div>
+        <div class="mag-footer">
+            <p>© 2026 Maria. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Exercise 3: Project Cards Grid -->
+    <h2>Exercise 3: Project Cards Grid</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="https://placehold.co/300x200" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>About Me Page built with semantic HTML.</p>
+        </div>
+        <div class="project-card">
+            <img src="https://placehold.co/300x200" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>Contact form with validation.</p>
+        </div>
+        <div class="project-card">
+            <img src="https://placehold.co/300x200" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>Semantic HTML conversion.</p>
+        </div>
+    </div>
+
+</body>
+</html>

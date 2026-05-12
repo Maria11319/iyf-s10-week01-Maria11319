@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 3 - Hero Section</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)
+            ),
+            url('https://placehold.co/1440x900');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 700px;
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            color: #dddddd;
+        }
+
+        .btn-hero {
+            background-color: #ff6b35;
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-hero:hover {
+            background-color: #cc5528;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content p {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Maria</h1>
+            <p>Aspiring Web Developer passionate about building beautiful and functional websites.</p>
+            <button class="btn-hero">View My Work</button>
+        </div>
+    </div>
+
+</body>
+</html>
